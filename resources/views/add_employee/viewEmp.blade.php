@@ -75,9 +75,9 @@
                     <div class="form-group row">
 
                         <label for="id"
-                            class="col-md-4 col-form-label text-md-right">{{__('text.emp')}} {{__('text.id')}}</label>
+                               class="col-md-4 col-form-label text-md-right">{{__('text.emp')}} {{__('text.id')}}</label>
                         <div class="col-md-6 col-6">
-                             <input id="id" type="text" class="form-control" name="id" value="id" autocomplete="off" readonly>
+                            <input id="id" type="text" class="form-control" name="id" value="id" autocomplete="off" readonly>
                         </div>
                         <label for="name"
                                class="col-md-4 col-form-label text-md-right">{{__('text.emp')}} {{__('text.name')}}</label>
@@ -86,8 +86,8 @@
                         </div>
                     </div>
 
-                    <div class="form-group row">
 
+                    <div class="form-group row">
                         <label for="email"
                                class="col-md-4 col-form-label text-md-right">{{__('text.emp')}} {{__('text.email')}}</label>
                         <div class="col-md-6 col-6">
@@ -96,7 +96,11 @@
                     </div>
                 </form>
             </div>
+            <div class="modal-footer">
+                <p>Date Registered: dd/mm/yyyy</p>
+            </div>
         </div>
+
     </div>
 
 @endsection
