@@ -1,0 +1,42 @@
+/*https://htmlcolorcodes.com/color-chart/material-design-color-chart/*/
+:root{
+    --hover-text-color: #1B4D3E;
+    --custom-text-color: #9575CD;
+    --append-text-color: #1E88E5;;
+
+}
+
+.custom-link {
+text-decoration: none;
+}
+
+.custom-link a:hover {
+text-decoration-color:var(--hover-text-color) ;
+}
+
+.loading_img {
+    width: 38px;
+    height: 28px;
+}
+.loading_img:hover {
+    background-color: unset!important;
+}
+
+#add_emp_details{
+    display: none;
+}
+
+#deductionForm{
+    /*display: none;*/
+}
+
+.material_pink{
+    color:var(--custom-text-color);
+}
+.custom_append_text_color{
+    color:var(--append-text-color);
+}
+.select2-container--default.select2-container--focus .select2-selection--multiple{
+    border-color: #ced4da!important;
+    box-shadow: unset!important;
+}

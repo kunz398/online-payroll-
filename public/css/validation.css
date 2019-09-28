@@ -1,0 +1,130 @@
+/* Start optional*/
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+textarea.form-control {
+    height: 200px;
+}
+
+.custom-radio .custom-control-input:checked ~ .custom-control-label::after {
+    background-image: none;
+}
+
+
+
+
+
+.custom-control-input:checked ~ .custom-control-label::before {
+    color: #009578;
+    border-color: #009578;
+    background-color: #009578;
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3E%3Cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3E%3C/svg%3E");
+
+}
+
+.grid-it {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.upload-btn {
+
+    padding: 6px;
+    color: #9FA8DA;
+    background-color: #fff;
+    border: 1px solid #BA68C8;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all .25s;
+}
+
+.upload-btn:hover {
+    color: white;
+    background-color: #F48FB1;
+    letter-spacing: 4px;
+    transition: all .25s;
+}
+
+.upload-text {
+    margin-left: 10px;
+    font-family: sans-serif;
+    color: #aaa;
+}
+
+.submit-btn {
+    width: 200px;
+    padding: 10px;
+    color: #009578;
+    background-color: #fff;
+    border: 1px solid #009578;
+    border-radius: 25px;
+    cursor: pointer;
+    letter-spacing: 2px;
+    transition: all .25s;
+}
+
+.submit-btn:hover {
+    color: white;
+    background-color: #009578;
+    letter-spacing: 4px;
+    transition: all .25s;
+}
+
+input:focus{
+    border-color: #ced4da!important;
+    box-shadow: unset!important;
+}
+
+textarea:focus{
+    border-color: #ced4da!important;
+    box-shadow: unset!important;
+}
+select:focus{
+    border-color: #ced4da!important;
+    box-shadow: unset!important;
+}
+/* \\End Optional */
+
+/*Start-> DO NOT REMOVE THIS PART*/
+.inbalid {
+    border-color: #dc3545;
+    padding-right: calc(1.5em + .75rem);
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KCiA8Zz4KICA8dGl0bGU+YmFja2dyb3VuZDwvdGl0bGU+CiAgPHJlY3QgZmlsbD0ibm9uZSIgaWQ9ImNhbnZhc19iYWNrZ3JvdW5kIiBoZWlnaHQ9IjQwMiIgd2lkdGg9IjU4MiIgeT0iLTEiIHg9Ii0xIi8+CiA8L2c+CiA8Zz4KICA8dGl0bGU+TGF5ZXIgMTwvdGl0bGU+CiAgPHBvbHlnb24gc3Ryb2tlPSJudWxsIiBpZD0ic3ZnXzEiIHBvaW50cz0iOTYuNTI2MDIyNTMwNjkyOSwtMC41MjUzNjM4NjI1MTQ0OTU4IDUwLjA2MDEwOTA1NjYwMzMyLDQ2LjYwOTMwMzAxNzI5NTg5IDMuNDI4MjUwMjA4OTgxMzUzNCwtMC41MjUzNjM4NjI1MTQ0OTU4IDAuMjc1MjA3NTE5NTMxMjUsMi42NjE2Nzc4NzIxMjg0NzE3IDQ2Ljc0MTExODExNTMyMzE2LDQ5Ljc5NjM0NDg0MTM5OTg2NSAwLjI3NTIwNzUxOTUzMTI1LDk2LjkzMTAwMzIyMjQxNDg5IDMuNDI4MjUwMjA4OTgxMzUzNCwxMDAuMTE4MDQ3OTA5MjcwOTggNTAuMDYwMTA5MDU2NjAzMzIsNTIuOTgzMzgzODAyNzUxNzEgOTYuNTI2MDIyNTMwNjkyOSwxMDAuMTE4MDQ3OTA5MjcwOTggOTkuODQ1MDIyMTA2ODY2MDUsOTYuOTMxMDAzMjIyNDE0ODkgNTMuMjEzMTU3NTAyNjQ4NzU1LDQ5Ljc5NjM0NDg0MTM5OTg2NSA5OS44NDUwMjIxMDY4NjYwNSwyLjY2MTY3Nzg3MjEyODQ3MTcgIiBmaWxsPSIjZGMzNTQ1Ii8+CiAgPGxpbmUgc3Ryb2tlLWxpbmVjYXA9Im51bGwiIHN0cm9rZS1saW5lam9pbj0ibnVsbCIgaWQ9InN2Z18yIiB5Mj0iNTMuNDM4ODcxIiB4Mj0iMzQuODkyOTE1IiB5MT0iMjIuMzA0NDgyIiB4MT0iNS41OTg5ODIiIHN0cm9rZS1vcGFjaXR5PSJudWxsIiBzdHJva2Utd2lkdGg9Im51bGwiIHN0cm9rZT0ibnVsbCIgZmlsbD0ibm9uZSIvPgogPC9nPgo8L3N2Zz4=");
+    background-repeat: no-repeat;
+    background-position: center right calc(.375em + .1875rem);
+    background-size: calc(.75em + .375rem) calc(.75em + .375rem);
+}
+
+.inbalid:focus{
+    border-color: #dc3545 !important;
+}
+
+.balid {
+    border-color: #28a745;
+    padding-right: calc(1.5em + .75rem);
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDgiIGhlaWdodD0iNDgiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CgogPHRpdGxlLz4KIDxnPgogIDx0aXRsZT5iYWNrZ3JvdW5kPC90aXRsZT4KICA8cmVjdCBmaWxsPSJub25lIiBpZD0iY2FudmFzX2JhY2tncm91bmQiIGhlaWdodD0iNDAyIiB3aWR0aD0iNTgyIiB5PSItMSIgeD0iLTEiLz4KIDwvZz4KIDxnPgogIDx0aXRsZT5MYXllciAxPC90aXRsZT4KICA8cG9seWxpbmUgc3Ryb2tlLXdpZHRoPSIycHgiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlPSIjMjhhNzQ1IiBmaWxsPSJub25lIiBpZD0ic3ZnXzEiIHBvaW50cz0iMSAyNSAxNSAzOSA0NyA3IiBjbGFzcz0iY2xzLTEiLz4KIDwvZz4KPC9zdmc+");
+    background-repeat: no-repeat;
+    background-position: center right calc(.375em + .1875rem);
+    background-size: calc(.75em + .375rem) calc(.75em + .375rem);
+}
+
+.balid:focus {
+    border-color: #28a745 !important;
+}
+
+.inbalid-feedback{
+    width: 100%;
+    margin-top: .25rem;
+    font-size: 80%;
+    color: #dc3545;
+}
+.balid-feedback{
+    width: 100%;
+    margin-top: .25rem;
+    font-size: 80%;
+    color: #28a745;
+}
+
+/* \\End-> DO NOT REMOVE THIS PART*/
