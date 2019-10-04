@@ -41,10 +41,12 @@ return [
     'amount'=>'Amount',
     'registered'=>'Registered',
     'current'=>'Current',
-    'emps'=>'Employees'
+    'emps'=>'Employees',
 
-
-
-
-
+    'email'=>'Email',
+    'role'=>'Role',
+    'gross'=>'Gross',
+    'update'=>'Update',
+    'calc'=>'Calculate',
+    'preferences'=>'Preferences'
 ];

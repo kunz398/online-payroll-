@@ -24,3 +24,8 @@ Route::post('/other_emp_details', 'AddUserController@other_emp_details')->name('
 Route::get('/deductionForm/{id}', 'AddUserController@deductionForm')->name('deductionForm');
 Route::post('/updateDeduction', 'AddUserController@updateDeduction')->name('updateDeduction');
 Route::get('/view_emp', 'DashBoardController@redirectviewEmp')->name('view_emp');
+Route::post('/ajaxs_edit_emp', 'AddUserController@AjaxsEditEmp')->name('edit_emp');
+Route::post('/update_emp', 'AddUserController@update_emp')->name('update_emp');
+Route::post('/delete_emp', 'AddUserController@deleteEmp')->name('delete_emp');
+Route::get('/calc', 'DashBoardController@redirectIndexCalc')->name('index.calc');
+Route::post('/pickUsersCalcPay', 'AddUserController@pickUsersCalcPay')->name('post.calc.pick.user');

@@ -32,7 +32,14 @@
                 </a>
             </div>
             <div class="col-4">
-
+                <a class="custom-link"  href="{{route('index.calc')}}"><div class="card text-white mb-3" style="max-width: 18rem; background: #e4615d;">
+                        <div class="card-header">{{__('text.calc')}} {{__('text.pay')}}</div>
+                        <div class="card-body">
+                            <h5 class="card-title"><i class="text-dark fas fa-calculator fa-2x"></i></h5>
+                            <p class="card-text">{{__('text.calc')}} {{__('text.emps')}} {{__('text.pay')}} </p>
+                        </div>
+                    </div>
+                </a>
             </div>
         </div>
     </div>
@@ -41,6 +48,6 @@
 
 @section('script')
     <script type="text/javascript">
-
+        validationForm('myCheckBoxes', 'myCheckBoxesMsg', "required",'checkbox',false)
     </script>
 @endsection
