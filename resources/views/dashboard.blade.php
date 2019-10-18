@@ -7,10 +7,24 @@
 
 @section('content')
     <div class="container">
+        @if(@$type == "emp")
+            <div class="row">
+                <div class="col-4">
+                    <a class="custom-link"  href="{{route('pay.view')}}"><div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
+                            <div class="card-header"></div>
+                            <div class="card-body">
+                                <h5 class="card-title"><i class="fab fa-cc-amazon-pay fa-2x"></i></h5>
+                                <p class="card-text"> {{__('text.view')}} {{__('text.pay_slip')}}.</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
 
-        <div class="row">
+
+            </div>
+        @else
+            <div class="row">
             <div class="col-4">
-
              <a class="custom-link"  href="{{route('add_emp')}}"><div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
                     <div class="card-header">{{__('text.add')}} {{__('text.emps')}}</div>
                     <div class="card-body">
@@ -42,6 +56,20 @@
                 </a>
             </div>
         </div>
+        @endif
+
+            <form>
+                <h1 class="text-monospace">FeedBack</h1>
+                <div class="input-group">
+
+                    <textarea type="text" class="form-control"> </textarea>
+                    <div class="input-group-btn">
+                        <button class="btn btn-default" type="submit">
+                            <i class="glyphicon glyphicon-search"></i>
+                        </button>
+                    </div>
+                </div>
+            </form>
     </div>
 
 @endsection

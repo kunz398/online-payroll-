@@ -29,3 +29,10 @@ Route::post('/update_emp', 'AddUserController@update_emp')->name('update_emp');
 Route::post('/delete_emp', 'AddUserController@deleteEmp')->name('delete_emp');
 Route::get('/calc', 'DashBoardController@redirectIndexCalc')->name('index.calc');
 Route::post('/pickUsersCalcPay', 'AddUserController@pickUsersCalcPay')->name('post.calc.pick.user');
+Route::post('/postHoursWorked', 'AddUserController@postHoursWorked')->name('post.hours');
+
+Route::get('/preferences', 'PreferenceController@index')->name('index.preferences');
+Route::post('/preferncesPost', 'PreferenceController@store')->name('post.week.starts');
+
+Route::get('/viewPay', 'PayController@index')->name('pay.view');
+Route::get('/individual/{id}', 'PayController@show')->name('pay.individual');

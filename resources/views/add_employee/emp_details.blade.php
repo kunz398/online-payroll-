@@ -81,7 +81,7 @@
         <label for="types_of_deduction"
                class="col-md-4 col-form-label text-md-right">{{__('text.select')}} {{__('text.emp')}} {{__('text.deduction')}}</label>
         <div class="col-md-6">
-            <select style="width:100%!important;" id="types_of_deduction" class="types_of_deduction" name="types_of_deduction[]" multiple="multiple">
+            <select style="width:100%!important;" id="types_of_deductiontypes_of_deduction" class="types_of_deduction" name="types_of_deduction[]" multiple="multiple">
                 <option value="fnpf">FNPF</option>
                 <option value="paye">PAYE</option>
             </select>

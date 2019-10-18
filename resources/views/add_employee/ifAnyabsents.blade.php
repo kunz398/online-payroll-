@@ -47,8 +47,10 @@
 
 @section('content')
     <div class="container">
-        @foreach($datas as $data)
 
+        @foreach($datas as $data)
+            <form method="post" action="{{route('post.hours')}}">
+                @csrf
             <div class="row">
                 <div class="col-12">
                     <div class="shadow-lg p-3 bg-white rounded text-center text-monospace">{{$data['email']}}</div>
@@ -59,6 +61,20 @@
                     @elseif($data['pay_cycle'] =="weekly")
                         <?php $size = 1; ?>
                     @endif
+                    <div class="row">
+                        <div class="col-12">
+                            <center>
+                                <label for="from">From</label>
+                            </center>
+
+                            <input type="date" id="from" name="from[]" class="form-control">
+                        </div>
+
+                    </div>
+
+                    <input type="hidden" name="email[]" value="{{$data['email']}}">
+                    <input type="hidden" name="id[]" value="{{$data['id']}}">
+                    <input type="hidden" name="cycle[]" value="{{$data['pay_cycle']}}">
                     @for($i = 0; $i < $size; $i++)
                         <div class="weekDays-selector p-5">
                             <div class="row">
@@ -85,47 +101,54 @@
                             </div>
 
                             <div class="row">
-                                <input type="text" name="mon" data-hrsofdays="mon_week:{{$i}}" id="hrs" placeholder="" class="hrsworked" value="">
+                                <input type="number" max="8" name="hrs[]" data-hrsofdays="mon_week:{{$i}}" id="hrs" placeholder="" class="hrsworked" value="">
 
-                                <input type="text" name="tue" data-hrsofdays="tue_week:{{$i}}"  id="hrs" placeholder="" class="hrsworked" value="">
+                                <input type="number" max="8" name="hrs[]" data-hrsofdays="tue_week:{{$i}}"  id="hrs" placeholder="" class="hrsworked" value="">
 
-                                <input type="text" name="wed" data-hrsofdays="wed_week:{{$i}}"  id="hrs" placeholder="" class="hrsworked" value="">
+                                <input type="number" max="8" name="hrs[]" data-hrsofdays="wed_week:{{$i}}"  id="hrs" placeholder="" class="hrsworked" value="">
 
-                                <input type="text" name="thu" data-hrsofdays="thu_week:{{$i}}"  id="hrs" placeholder="" class="hrsworked" value="">
+                                <input type="number" max="8" name="hrs[]" data-hrsofdays="thu_week:{{$i}}"  id="hrs" placeholder="" class="hrsworked" value="">
 
-                                <input type="text" name="fri" data-hrsofdays="fri_week:{{$i}}"  id="hrs" placeholder="" class="hrsworked" value="">
+                                <input type="number" max="8" name="hrs[]" data-hrsofdays="fri_week:{{$i}}"  id="hrs" placeholder="" class="hrsworked" value="">
 
-                                <input type="text" name="sat" data-hrsofdays="sat_week:{{$i}}"  id="hrs" placeholder="" class="hrsworked" value="">
+                                <input type="number" max="8" name="hrs[]" data-hrsofdays="sat_week:{{$i}}"  id="hrs" placeholder="" class="hrsworked" value="">
 
-                                <input type="text" name="sun" data-hrsofdays="sun_week:{{$i}}"  id="hrs" placeholder="" class="hrsworked" value="">
+                                <input type="number" max="8" name="hrs[]" data-hrsofdays="sun_week:{{$i}}"  id="hrs" placeholder="" class="hrsworked" value="">
                             </div>
                             <small style="position: absolute;bottom: 21px;left: 24%;">Hours Worked!</small>
                         </div>
+
                         @endfor
+
+
                 </div>
             </div>
+
         @endforeach
-        <center>
-            <button class="btn btn-outline-primary hvr-curl-bottom-left" id="genePay">Generate Pay</button>
-        </center>
+            <center>
+                <button type="submit" name="calc_submit" class="btn btn-outline-primary hvr-curl-bottom-left" id="genePay">Generate Pay</button>
+            </center>
+        </form>
     </div>
 @endsection
 
 @section('script')
     <script type="text/javascript">
-        $('#genePay').on('click',  function() {
-            var daysCheckedByUsers = [];
-            var hoursInputedByUsers = [];
-            $.each($("input[class='weekday']:checked"), function(){
-                daysCheckedByUsers.push($(this).val());
-            });
-            $(".hrsworked").each(function() {
-                    hoursInputedByUsers.push($(this).data('hrsofdays'));
-                    hoursInputedByUsers.push($(this).val());
-                    hoursInputedByUsers.push("\n");
-            });
-            console.log(hoursInputedByUsers);
-
-        });
+        // $('#genePay').on('click',  function() {
+        //     var daysCheckedByUsers = [];
+        //     var hoursInputedByUsers = [];
+        //     $.each($("input[class='weekday']:checked"), function(){
+        //         daysCheckedByUsers.push($(this).val());
+        //     });
+        //     $(".hrsworked").each(function() {
+        //             hoursInputedByUsers.push($(this).data('hrsofdays'));
+        //             hoursInputedByUsers.push($(this).val());
+        //             hoursInputedByUsers.push("\n");
+        //     });
+        //     console.log(hoursInputedByUsers);
+        //     console.log("--------------");
+        //     console.log(daysCheckedByUsers);
+        //
+        // });
     </script>
 @endsection

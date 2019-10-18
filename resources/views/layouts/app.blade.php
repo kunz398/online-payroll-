@@ -29,6 +29,7 @@
     <!-- jQuery Modal -->
     <link rel="stylesheet" href="{{asset('css/jquery.modal.min.css')}}">
     <link rel="stylesheet" href="{{asset('hover/css/hover.css')}}">
+    <link rel="stylesheet" href="{{asset('css/dataTables.bootstrap4.min.css')}}">
     @yield('style')
 </head>
 <body>
@@ -77,7 +78,7 @@
                                         @csrf
                                     </form>
 
-                                    <a class="dropdown-item" href="#">
+                                    <a class="dropdown-item" href="{{route('index.preferences')}}">
                                         {{ __('text.preferences') }}
                                     </a>
                                 </div>
@@ -96,7 +97,10 @@
         </main>
     </div>
     {{--<script src="https://use.fontawesome.com/858f7ce8cc.js"></script>--}}
+
     <script src="{{asset('js/jquery.modal.min.js')}}"></script>
+    <script src="{{asset('js/dataTables.bootstrap4.min.js')}}"></script>
+    <script src="{{asset('js/jquery.dataTables.min.js')}}"></script>
     @yield('script')
 </body>
 </html>
